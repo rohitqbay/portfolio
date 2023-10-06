@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MY PORTFOLIO</title>
+    <style>
+        /* CSS styles for the login page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #DD737F;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 2rem;
+        }
+
+        form {
+            margin: 20px auto;
+            max-width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #040720;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #333;
+        }
+
+        /* Additional styles for specific sections */
+        /* You can keep your existing styles for the portfolio page here */
+        /* ... */
+    </style>
+</head>
+<body>
+    <h1>Login to MY PORTFOLIO</h1>
+    <form id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="username" name="username" placeholder="Username" required><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        // JavaScript code for login and redirection
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get the input values
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+
+            // Check if the credentials are correct
+            if ((username === 'sri' && password === 'sri123') || (username === 'rohit' && password === 'roh123')) {
+                // Redirect to the portfolio page upon successful login
+                window.location.href = 'file:///C:/Users/Admin/Desktop/port.html#contact'; // Change this to the actual URL of your portfolio page
+            } else {
+                alert('Login failed. Please check your username and password.');
+            }
+        });
+    </script>
+</body>
+</html>
